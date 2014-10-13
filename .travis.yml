@@ -11,13 +11,15 @@ install:
   - go get github.com/laher/goxc
 
 script:
-  - goxc -d . -bc="darwin,win,linux" -resources-include="README.md"
+  - goxc -d . -bc="darwin,windows,linux" -resources-include="README.md"
 
 deploy:
   provider: releases
   api_key:
     secure: MwAv0HOtCgJH1TnRG1a3z3qBwcVYSjCCWAnn/gTfZMG4DTNijsgUWYTVGoreGJwsgbK2WpMJYs8qstULon6FrEWXp+8RVs4HkThp0ReHlFwBXMdFgE2PuY68638ndPwqdEOXzxSlU4rCemvp/5bH2xLop7I6ScBgWayPwAzHj3E=
   file:
+    - snapshot/pretty_windows_386.zip
+    - snapshot/pretty_windows_amd64.zip
     - snapshot/pretty_darwin_386.zip
     - snapshot/pretty_darwin_amd64.zip
     - snapshot/pretty_linux_386.tar.gz
