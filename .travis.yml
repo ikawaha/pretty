@@ -14,7 +14,7 @@ script:
 deploy:
   provider: releases
   api_key:
-    secure: GSS2FdRHBVIkAZ60+nxcJpjWLHRDcVfEBh/Fj8T6V5erV4eMzZoJuaLnLo/wIjNfVHciPB3dvMOeUud7Tt7xIvbZrtF+mY1y04SH0bylozK0ypJuMheLy2BaqX1tYFqGY6fHy6kq5TqyS1ybhqOL7F/88c6L1B2q/NgI4N3Nz5k=
+    secure: MwAv0HOtCgJH1TnRG1a3z3qBwcVYSjCCWAnn/gTfZMG4DTNijsgUWYTVGoreGJwsgbK2WpMJYs8qstULon6FrEWXp+8RVs4HkThp0ReHlFwBXMdFgE2PuY68638ndPwqdEOXzxSlU4rCemvp/5bH2xLop7I6ScBgWayPwAzHj3E=
   file:
     - snapshot/pretty_darwin_386.zip
     - snapshot/pretty_darwin_amd64.zip
