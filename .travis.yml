@@ -1,0 +1,30 @@
+language: go
+
+go:
+  - release
+
+before_install:
+
+install:
+  - go get github.com/laher/goxc
+
+script:
+  - goxc -d . -bc="darwin,win,linux" -resources-include="README.md"
+
+deploy:
+  provider: releases
+  api_key:
+    secure: GSS2FdRHBVIkAZ60+nxcJpjWLHRDcVfEBh/Fj8T6V5erV4eMzZoJuaLnLo/wIjNfVHciPB3dvMOeUud7Tt7xIvbZrtF+mY1y04SH0bylozK0ypJuMheLy2BaqX1tYFqGY6fHy6kq5TqyS1ybhqOL7F/88c6L1B2q/NgI4N3Nz5k=
+  file:
+    - snapshot/pretty_darwin_386.zip
+    - snapshot/pretty_darwin_amd64.zip
+    - snapshot/pretty_linux_386.tar.gz
+    - snapshot/pretty_linux_amd64.tar.gz
+    - snapshot/pretty_linux_arm.tar.gz
+    - snapshot/pretty_snapshot_amd64.deb
+    - snapshot/pretty_snapshot_armhf.deb
+    - snapshot/pretty_snapshot_i386.deb
+  skip_cleanup: true
+  on:
+    tags: true
+    all_branches: true
