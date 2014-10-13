@@ -2,9 +2,14 @@
 
 # Install
 
+## Source
 ```
 go get github.com/ikawaha/pretty
 ```
+
+## Binaries
+
+https://github.com/ikawaha/pretty/releases
 
 # Usage
 
