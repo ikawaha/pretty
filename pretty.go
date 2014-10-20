@@ -13,7 +13,7 @@ func main() {
 	io.Copy(&j, os.Stdin)
 	var dst bytes.Buffer
 	if e := json.Indent(&dst, j.Bytes(), "", "    "); e != nil {
-		fmt.Fprintln(os.Stderr, "pretty: %v", e)
+		fmt.Fprintf(os.Stderr, "pretty: %v\n", e)
 	}
 	fmt.Println(dst.String())
 }
